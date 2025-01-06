@@ -1,0 +1,148 @@
+---
+format: 
+  revealjs:
+    theme: [simple, ../../day2/lecture3-reading-in-data/custom.scss]
+    highlight: pygments
+    logo: images/id529-sticker.png
+    slide-number: true
+    footer: "<https://id529.github.io/>"
+execute: 
+  echo: true
+---
+
+# Data Analysis From Start to Finish {.white-title .white-code background-image="images/bg-no-planet.png" background-size="110% auto"}
+
+::: {.white-15-pt}
+ID 529: Data Management and Analytic Workflows in R
+:::
+
+::: {.white-12-pt}
+Dean Marengi \| Wednesday, January 17<sup>th</sup>, 2024
+:::
+
+## Context for what we'll be discussing 
+
+<br> 
+
+-   To walk through the methods implemented with R to go from raw data to data analysis for an exposure assessment project for "EH 263 Analytical Methods and Exposure Assessment". 
+
+<br> 
+
+-   The project aimed to explore the additional contribution of food truck exhaust to Ultra-fine Particle Concentrations in ambient air, above and beyond background levels.
+
+## Methods implemented that we have discussed 
+
+  -   Project based workflows
+  -   Reading in data with `readr`
+  -   Conditionals and for loops
+  -   Writing functions
+  -   Data manipulation using `dplyr`
+  -   Combining (linking) datasets
+  -   Text processing using `stringr`
+  -   Working with factors, dates, and times using `lubridate`
+  -   Data visualizations using `ggplot`
+  -   Functional programming for efficient file imports and modeling
+  
+<!---   `R Markdown` for reporting -->
+
+## Why food trucks? 
+
+-   UFPs have an aerodynamic diameter of 0.1 µm or less (Li et al., 2016; Moreno-Ríos et al., 2022)
+
+<br>
+
+-   Diesel exhaust substantially contributes to UFP concentrations 
+
+<br>
+
+-   Food trucks often use diesel or gas generators to power truck operations
+    -   These generators are typically run for many hours (i.e., for the duration of time trucks are on-site)
+
+## Existing regulations
+
+<br>
+
+-   To improve the ambient air quality of air pollutants from idling vehicles, the Massachusetts Anti-Idling Law limits engine idling up to 5 minutes (MA Department of Environmental Protection, n.d.).
+    -   However, there are no restrictions in the Mass. Anti-Idling Law, or other laws, that aim to constrain air-pollution emissions from food truck generators)
+
+## Hypotheses
+
+<br>
+
+1. UFP concentrations will be higher when food trucks are present compared with when they are not present
+
+<br>
+
+2. UFP measurements at a 5-meter distance from food trucks will be associated with higher UFP concentrations when compared with measurements taken at a 10-meter distance 
+
+<!-- # Study design {.white-title .white-code background-image="images/bg-no-planet.png" background-size="110% auto"} -->
+
+
+## Study design overview {.smaller}
+
+<center>
+![](images/ft-study-design.png){width=50%}
+</center>
+
+**Figure A:** Sampling site configuration at the HSCP. Condensation Particle Counter (CPC) placement in relation to the HSCP outdoor dining area and food truck parking area is shown in red. 
+
+**Figure B:** Approximate timeline for the sampling protocol. Data collection began at approximately 10:00 AM and ended at approximately 11:30 AM. Food truck arrival times varied, but generally occurred between 10:15 and 11:00 AM.
+
+# Data processing problems to solve {.white-title .white-code background-image="images/bg-no-planet.png" background-size="110% auto"}
+
+
+## Part 1: Compiling and organizing UFP data {.smaller}
+
+<br>
+
+-   **Compile 34 raw data files** that were exported from CPC device software
+
+<br>
+
+-   **For each file (Part A):**
+    -   Standardize the file structure
+    -   Derive new variables based on existing columns, and metadata embedded in file names
+        -   A sample ID variable
+        -   File name
+        -   Several date/time variables
+        -   An indicator for which CPC device collected the measurements
+        -   An indicator for which distance the measurements were collected at (5- versus 10-meter)
+    -   Re-organize the columns
+
+##  CPC raw data example file (n=34, each with 5000+ rows)
+
+![](images/ft-cpc-ufp-raw-example.png)
+
+## Part 1: Compiling and organizing UFP data (cont.) {.smaller}
+
+<br>
+
+-   **For each file (Part B):**
+    -   Reference a sample log to "look up" truck arrival times for a given sample ID (e.g., FT001, FT002, etc.)
+    -   Use this truck arrival time to create an indicator for whether a one-second measurement was taken before or after truck arrival (i.e., Pre-truck versus Post-truck)
+        -   **Note:** This is because the CPCs were continuously collecting measurements for the whole measurement period (all pre- and post-truck arrival measurements were contained within a single file) 
+
+
+## Sample log example file (n=1)
+
+![](images/ft-sample-log.png)
+
+
+## Part 2: Joining measurement and sample log data with covariate data
+<br> 
+
+-   The Pre- versus Post-truck indicator in Part 1 allows us to join data from a third file containing covariate data
+
+:::{.small-break}
+:::
+
+-   The covariate data file contained:
+    -   Sample ID
+    -   A pre- versus post-truck indicator variable
+    -   Meteorological parameters (e.g., temperature (F), % relative humidity, wind speed (mph), etc.
+
+
+## Covariate data example file (n=1)
+
+![](images/ft-covariates.png){width="80%"}
+
