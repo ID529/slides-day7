@@ -7,6 +7,8 @@ format:
     logo: images/id529-sticker.png
     slide-number: true
     footer: "<https://id529.github.io/>"
+revealjs-plugins:
+  - pointer
 execute: 
   echo: true
 ---
@@ -157,8 +159,8 @@ Dean Marengi \| Wednesday, January 22<sup>nd</sup>, 2025
 
 ![](/images/food-truck-data-pipeline-animation.gif)
 
-## GitHub repository with code
+<!-- ## GitHub repository with code -->
 
 
-<>
+<!-- <> -->
 
