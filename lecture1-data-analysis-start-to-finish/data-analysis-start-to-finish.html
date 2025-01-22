@@ -331,10 +331,10 @@
 <p>ID 529: Data Management and Analytic Workflows in R</p>
 </div>
 <div class="white-12-pt">
-<p>Dean Marengi | Wednesday, January 17<sup>th</sup>, 2024</p>
+<p>Dean Marengi | Wednesday, January 22<sup>nd</sup>, 2025</p>
 </div>
 </section>
-<section id="context-for-what-well-be-discussing" class="slide level2">
+<section id="context-for-what-well-be-discussing" class="slide level2 smaller">
 <h2>Context for what we’ll be discussing</h2>
 <p><br></p>
 <ul>
@@ -345,11 +345,12 @@
 <li>The project aimed to explore the additional contribution of food truck exhaust to Ultra-fine Particle Concentrations in ambient air, above and beyond background levels.</li>
 </ul>
 </section>
-<section id="methods-implemented-that-we-have-discussed" class="slide level2">
+<section id="methods-implemented-that-we-have-discussed" class="slide level2 smaller">
 <h2>Methods implemented that we have discussed</h2>
+<p><br></p>
 <ul>
 <li>Project based workflows</li>
-<li>Reading in data with <code>readr</code></li>
+<li>Reading in data with <code>readr</code> and <code>readxl</code></li>
 <li>Conditionals and for loops</li>
 <li>Writing functions</li>
 <li>Data manipulation using <code>dplyr</code></li>
@@ -357,28 +358,22 @@
 <li>Text processing using <code>stringr</code></li>
 <li>Working with factors, dates, and times using <code>lubridate</code></li>
 <li>Data visualizations using <code>ggplot</code></li>
-<li>Functional programming for efficient file imports and modeling</li>
+<li>Functional programming for efficient file imports using <code>purrr</code></li>
 </ul>
-<!---   `R Markdown` for reporting -->
 </section>
-<section id="why-food-trucks" class="slide level2">
+<section id="why-food-trucks" class="slide level2 smaller">
 <h2>Why food trucks?</h2>
+<p><br></p>
 <ul>
 <li>UFPs have an aerodynamic diameter of 0.1 µm or less (Li et al., 2016; Moreno-Ríos et al., 2022)</li>
-</ul>
-<p><br></p>
-<ul>
 <li>Diesel exhaust substantially contributes to UFP concentrations</li>
-</ul>
-<p><br></p>
-<ul>
 <li>Food trucks often use diesel or gas generators to power truck operations
 <ul>
 <li>These generators are typically run for many hours (i.e., for the duration of time trucks are on-site)</li>
 </ul></li>
 </ul>
 </section>
-<section id="existing-regulations" class="slide level2">
+<section id="existing-regulations" class="slide level2 smaller">
 <h2>Existing regulations</h2>
 <p><br></p>
 <ul>
@@ -388,7 +383,7 @@
 </ul></li>
 </ul>
 </section>
-<section id="hypotheses" class="slide level2">
+<section id="hypotheses" class="slide level2 smaller">
 <h2>Hypotheses</h2>
 <p><br></p>
 <ol type="1">
@@ -407,12 +402,24 @@
 </center>
 <p><strong>Figure A:</strong> Sampling site configuration at the HSCP. Condensation Particle Counter (CPC) placement in relation to the HSCP outdoor dining area and food truck parking area is shown in red.</p>
 <p><strong>Figure B:</strong> Approximate timeline for the sampling protocol. Data collection began at approximately 10:00 AM and ended at approximately 11:30 AM. Food truck arrival times varied, but generally occurred between 10:15 and 11:00 AM.</p>
-</section></section>
+</section>
+<section id="getting-started-with-data-collection" class="slide level2">
+<h2>Getting started with data collection</h2>
+
+<img data-src="images/cpc-stand-development-01.png" class="r-stretch"></section>
+<section id="getting-started-with-data-collection-1" class="slide level2">
+<h2>Getting started with data collection</h2>
+
+<img data-src="images/sample-site-security-camera-01.png" class="r-stretch"></section></section>
 <section>
 <section id="data-processing-problems-to-solve" class="title-slide slide level1 white-title white-code center" data-background-image="images/bg-no-planet.png" data-background-size="110% auto">
 <h1>Data processing problems to solve</h1>
 
 </section>
+<section id="data-pipeline-overview" class="slide level2">
+<h2>Data pipeline overview</h2>
+
+<img data-src="/images/data-pipeline-overview.png" class="r-stretch"></section>
 <section id="part-1-compiling-and-organizing-ufp-data" class="slide level2 smaller">
 <h2>Part 1: Compiling and organizing UFP data</h2>
 <p><br></p>
@@ -478,7 +485,15 @@
 </section>
 <section id="covariate-data-example-file-n1" class="slide level2">
 <h2>Covariate data example file (n=1)</h2>
-<p><img data-src="images/ft-covariates.png" style="width:80.0%"></p>
+
+<img data-src="images/ft-covariates.png" style="width:80.0%" class="r-stretch"></section>
+<section id="data-pipeline-overview-1" class="slide level2">
+<h2>Data pipeline overview</h2>
+
+<img data-src="/images/data-pipeline-overview.png" class="r-stretch"></section>
+<section id="data-pipeline-overview-2" class="slide level2">
+<h2>Data pipeline overview</h2>
+<p><img data-src="/images/food-truck-data-pipeline-animation.gif"></p>
 <p><img src="images/id529-sticker.png" class="slide-logo"></p>
 <div class="footer footer-default">
 <p><a href="https://id529.github.io/" class="uri">https://id529.github.io/</a></p>
