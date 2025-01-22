@@ -5,16 +5,14 @@ format:
     theme: [default, missing-data.scss]
 slide-number: true
 title-slide-attributes:
-  data-background-image: "graphics/transition_slides/venti-views.jpg"
+  data-background-image: "https://github.com/ID529/lectures/blob/main/graphics/transition_slides/venti-views.jpg?raw=true"
   data-background-opacity: "30%"
   data-background-color: "black"
-revealjs-plugins:
-  - pointer
 execute: 
   echo: true
 ---
 
-## morals {background-image="graphics/transition_slides/venti-views.jpg" background-opacity="30%" background-color="black" .small}
+## morals {background-image="https://github.com/ID529/lectures/blob/main/graphics/transition_slides/venti-views.jpg?raw=true" background-opacity="30%" background-color="black" .small}
 
 "The things we consider important are often undervalued by other disciplines … One of the most important concepts in Statistics is that of missing data. For most people it’s easy to ignore because much of it is not very visible." <br>
 — Cyntha Struthers and Don McLeish <br><br>
@@ -48,7 +46,7 @@ execute:
 
 :::{.columns}
 :::{.column}
-<img src="graphics/HoduRed.png" alt="Hodu in red light">
+<img src="https://github.com/ID529/lectures/blob/main/graphics/HoduRed.png?raw=true" alt="Hodu in red light">
 :::
 :::{.column}
   1. report on the missingness! 
