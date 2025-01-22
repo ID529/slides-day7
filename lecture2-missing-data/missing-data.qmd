@@ -1,5 +1,5 @@
 ---
-title: "Reporting on Missing Data"
+title: "<span style='color: white'>Reporting on Missing Data</span>"
 format:
   revealjs:
     theme: [default, missing-data.scss]
