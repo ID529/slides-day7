@@ -7,8 +7,12 @@ format:
     logo: images/id529-sticker.png
     slide-number: true
     footer: "<https://id529.github.io/>"
+    pointer:
+      color: OrangeRed
+      pointerSize: 50
 revealjs-plugins:
   - pointer
+  - confetti
 execute: 
   echo: true
 ---
@@ -32,6 +36,19 @@ Dean Marengi \| Wednesday, January 21<sup>st</sup>, 2026
 <br>
 
 -   The project aimed to explore the additional contribution of food truck exhaust to Ultra-fine Particle Concentrations in ambient air, above and beyond background levels.
+
+## Github repo {.smaller}
+
+<br>
+
+- **Repo can be found here:** <https://github.com/dmarengi/food_truck_2025>{target="_blank"}
+  - Limited documention on this page
+  - Only recently* added the datasets on which the R code runs
+    
+<br> <br> <br>
+
+\* *right before class*
+    
 
 ## Methods implemented that we have discussed {.smaller}
 
@@ -62,7 +79,7 @@ Dean Marengi \| Wednesday, January 21<sup>st</sup>, 2026
 <br>
 
 -   To improve the ambient air quality of air pollutants from idling vehicles, the Massachusetts Anti-Idling Law limits engine idling up to 5 minutes (MA Department of Environmental Protection, n.d.).
-    -   However, there are no restrictions in the Mass. Anti-Idling Law, or other laws, that aim to constrain air-pollution emissions from food truck generators)
+    -   However, there are no restrictions in the Mass. Anti-Idling Law, or other laws, that aim to constrain air-pollution emissions from food truck generators
 
 ## Hypotheses {.smaller}
 

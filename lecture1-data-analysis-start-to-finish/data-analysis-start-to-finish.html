@@ -347,6 +347,19 @@
 <li>The project aimed to explore the additional contribution of food truck exhaust to Ultra-fine Particle Concentrations in ambient air, above and beyond background levels.</li>
 </ul>
 </section>
+<section id="github-repo" class="slide level2 smaller">
+<h2>Github repo</h2>
+<p><br></p>
+<ul>
+<li><strong>Repo can be found here:</strong> <a href="https://github.com/dmarengi/food_truck_2025" target="_blank">https://github.com/dmarengi/food_truck_2025</a>
+<ul>
+<li>Limited documention on this page</li>
+<li>Only recently* added the datasets on which the R code runs</li>
+</ul></li>
+</ul>
+<p><br> <br></p>
+<p>* <em>right before class</em></p>
+</section>
 <section id="methods-implemented-that-we-have-discussed" class="slide level2 smaller">
 <h2>Methods implemented that we have discussed</h2>
 <p><br></p>
@@ -381,7 +394,7 @@
 <ul>
 <li>To improve the ambient air quality of air pollutants from idling vehicles, the Massachusetts Anti-Idling Law limits engine idling up to 5 minutes (MA Department of Environmental Protection, n.d.).
 <ul>
-<li>However, there are no restrictions in the Mass. Anti-Idling Law, or other laws, that aim to constrain air-pollution emissions from food truck generators)</li>
+<li>However, there are no restrictions in the Mass. Anti-Idling Law, or other laws, that aim to constrain air-pollution emissions from food truck generators</li>
 </ul></li>
 </ul>
 </section>
@@ -516,6 +529,7 @@
   <script src="data-analysis-start-to-finish_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="data-analysis-start-to-finish_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
   <script src="data-analysis-start-to-finish_files/libs/revealjs/plugin/reveal-pointer/pointer.js"></script>
+  <script src="data-analysis-start-to-finish_files/libs/revealjs/plugin/reveal-confetti/confetti.js"></script>
   <script src="data-analysis-start-to-finish_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -537,7 +551,8 @@
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'pointer': {"key":"q","color":"red","pointerSize":16,"alwaysVisible":false},
+'pointer': {"key":"q","color":"OrangeRed","pointerSize":50,"alwaysVisible":false},
+'confetti': {"particleCount":50,"angle":90,"spread":45,"startVelocity":45,"decay":0.9,"gravity":1,"drift":0,"ticks":200,"colors":null,"shapes":null,"scalar":1,"zIndex":100,"disableForReducedMotion":false},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -708,7 +723,7 @@
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealPointer, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealPointer, RevealConfetti, QuartoSupport,
 
           RevealMath,
           RevealNotes,
